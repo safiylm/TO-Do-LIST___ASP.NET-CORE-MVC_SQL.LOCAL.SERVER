@@ -1,35 +1,56 @@
 ﻿@model IEnumerable<TODOLIST_ASP.NET_CORE_MVC.Models.TodolistModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "To do list";
 }
 
-<h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <div id="createpartialzone"></div>
 </p>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.item)
+                @*@Html.DisplayNameFor(model => model.item)*@
+                Ma Todolist
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @if(Model.Count() ==0 ){
+             <tr>
+                <td>
+                    Aucune tâche crée.
+                </td>
+            </tr>
+        }
+        @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.item)
             </td>
+            
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                 <div id="editpartialzone-@item.Id"></div>
+            </td>
+            
+            <td>
+                    <div id="deletepartialzone-@item.Id"></div>
             </td>
         </tr>
+          
+            <script>
+                $("#editpartialzone-@item.Id").load("/Todolist/EditPartial?id=@item.Id")
+                $("#deletepartialzone-@item.Id").load("/Todolist/DeletePartial?id=@item.Id")
+            </script>
+       
 }
+
+        <script>
+          $('#createpartialzone').load("/Todolist/CreatePartial")
+        </script>
     </tbody>
 </table>

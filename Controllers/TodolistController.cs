@@ -28,7 +28,7 @@ namespace TODOLIST_ASP.NET_CORE_MVC.Controllers
         }
 
         // GET: TodolistModels/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> DetailsPartial(int? id)
         {
             if (id == null || _context.TodolistModelDB == null)
             {
@@ -42,13 +42,13 @@ namespace TODOLIST_ASP.NET_CORE_MVC.Controllers
                 return NotFound();
             }
 
-            return View(todolistModel);
+            return PartialView(todolistModel);
         }
 
         // GET: TodolistModels/Create
-        public IActionResult Create()
+        public IActionResult CreatePartial()
         {
-            return View();
+            return PartialView();
         }
 
         // POST: TodolistModels/Create
@@ -68,7 +68,7 @@ namespace TODOLIST_ASP.NET_CORE_MVC.Controllers
         }
 
         // GET: TodolistModels/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> EditPartial(int? id)
         {
             if (id == null || _context.TodolistModelDB == null)
             {
@@ -80,7 +80,7 @@ namespace TODOLIST_ASP.NET_CORE_MVC.Controllers
             {
                 return NotFound();
             }
-            return View(todolistModel);
+            return PartialView(todolistModel);
         }
 
         // POST: TodolistModels/Edit/5
@@ -119,7 +119,7 @@ namespace TODOLIST_ASP.NET_CORE_MVC.Controllers
         }
 
         // GET: TodolistModels/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> DeletePartial(int? id)
         {
             if (id == null || _context.TodolistModelDB == null)
             {
@@ -133,7 +133,7 @@ namespace TODOLIST_ASP.NET_CORE_MVC.Controllers
                 return NotFound();
             }
 
-            return View(todolistModel);
+            return PartialView(todolistModel);
         }
 
         // POST: TodolistModels/Delete/5
