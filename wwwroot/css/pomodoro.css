@@ -1,0 +1,79 @@
+﻿*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+main {
+    background-color: #6200ea;
+    padding: 20px;
+    width: 100vh;
+} 
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 20px 0px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 30px;
+}
+
+.affichage {
+    background: white;
+    margin: 50px auto; /*centrer*/
+    /*largeur*/
+    width: 70%;
+    max-width: 900px;
+    min-width: 500px;
+    /*pour les mettre l'un à coté de l'autre*/
+    display: flex;
+}
+
+.bloc {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    padding: 40px;
+    color:#6200ea;
+}
+
+    .bloc p:nth-child(1) { /*premier paragraphe dans les blocs */
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .bloc:nth-child(1) {
+        border-right: 1px solid #333;
+    }
+
+.container-btns {
+    margin: 0 auto;
+    width: 70%;
+    max-width: 900px;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: block;
+    padding: 18px;
+    font-size: 25px;
+    width: 200px;
+    color:white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0 10px;
+}
