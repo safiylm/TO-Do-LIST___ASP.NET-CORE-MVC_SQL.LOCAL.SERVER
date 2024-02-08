@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lZaweHu4XdFe0ObLrenwLpVKvYURDsSpbBnq+n7H0ug=",
+  "Hash": "7QygcIk9dg3az027KvFwo2uYGpRUUe/Loiby3AG0Wsg=",
   "Source": "TODOLIST ASP.NET CORE MVC",
   "BasePath": "_content/TODOLIST ASP.NET CORE MVC",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "D:\\50\\.NET\\TODOLIST ASP.NET CORE MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TODOLIST ASP.NET CORE MVC.bundle.scp.css"
     },
     {
+      "Identity": "D:\\50\\.NET\\TODOLIST ASP.NET CORE MVC\\wwwroot\\css\\pomodoro.css",
+      "SourceId": "TODOLIST ASP.NET CORE MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\50\\.NET\\TODOLIST ASP.NET CORE MVC\\wwwroot\\",
+      "BasePath": "_content/TODOLIST ASP.NET CORE MVC",
+      "RelativePath": "css/pomodoro.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\pomodoro.css"
+    },
+    {
       "Identity": "D:\\50\\.NET\\TODOLIST ASP.NET CORE MVC\\wwwroot\\css\\site.css",
       "SourceId": "TODOLIST ASP.NET CORE MVC",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\50\\.NET\\TODOLIST ASP.NET CORE MVC\\wwwroot\\js\\pomodoro.js",
+      "SourceId": "TODOLIST ASP.NET CORE MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\50\\.NET\\TODOLIST ASP.NET CORE MVC\\wwwroot\\",
+      "BasePath": "_content/TODOLIST ASP.NET CORE MVC",
+      "RelativePath": "js/pomodoro.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\pomodoro.js"
     },
     {
       "Identity": "D:\\50\\.NET\\TODOLIST ASP.NET CORE MVC\\wwwroot\\js\\site.js",
