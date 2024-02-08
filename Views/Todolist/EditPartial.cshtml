@@ -5,16 +5,13 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="item" class="control-label">Modifier : </label>
                 <input asp-for="item" class="form-control" />
                 <span asp-validation-for="item" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Enregistrer" class="btn btn-primary" />
-                <input type="button" value="Annuler" class="btn btn-primary" id="btn-hide-edit" />
             </div>
         </form>
-<input type="button" value="Edit" class="btn btn-primary"  id="btn-display-edit"/>
 
 
 @section Scripts {
@@ -22,17 +19,20 @@
 }
 <script>
         $(document).ready(function () {
-            $("#form-edit").hide();
-            $("#btn-display-edit").click(function () {
                 $("#form-edit").show(1000);
-                $("#btn-display-edit").hide(1000);
-            })
-
-            $("#btn-hide-edit").click(function () {
-                 $("#form-edit").hide(1000);
-                 $("#btn-display-edit").show(1000);
-            })
         })
 </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+
+        form{
+            display:flex;
+            .form-control{
+                width:400px;
+            }
+        }
+
+
+    </style>
