@@ -5,9 +5,12 @@
 }
 
 
-<p>
+
     <div id="createpartialzone"></div>
-</p>
+
+<script>
+    $('#createpartialzone').load("/Todolist/CreatePartial")
+</script>
 
 <table class="table">
     <thead>
@@ -29,28 +32,70 @@
         }
         @foreach (var item in Model) {
         <tr>
+          
+
             <td>
-                @Html.DisplayFor(modelItem => item.item)
+                    <input type="radio" onchange="taskfinish( @item.Id )"/>
             </td>
             
-            <td>
+                <td id="task-content-@item.Id">
+                    @Html.DisplayFor(modelItem => item.item)
+            </td>
+            
+                <td style="display:flex;">
+
+                    <button class="btn btn-light" onclick="showEditForm( @item.Id )" id="btn-for-show-edit-form-@item.Id">Edit </button>
                  <div id="editpartialzone-@item.Id"></div>
+                    <input type="button" onclick="hideEditForm(@item.Id)" value="Annuler" class="btn btn-light btn-edit-annuler" id="btn-edit-annuler-@item.Id"/>
+
             </td>
             
             <td>
-                    <div id="deletepartialzone-@item.Id"></div>
+                  <div id="deletepartialzone-@item.Id"></div>
             </td>
         </tr>
           
             <script>
-                $("#editpartialzone-@item.Id").load("/Todolist/EditPartial?id=@item.Id")
+
                 $("#deletepartialzone-@item.Id").load("/Todolist/DeletePartial?id=@item.Id")
+                $(".btn-edit-annuler").hide();
+                $("#editpartialzone-@item.Id").hide();
+
+                
+                @* Modifier sa tache    *@
+                function showEditForm(id) {
+                    $(`#btn-edit-annuler-${id}`).show();
+                        $(`#editpartialzone-${id}`).show()
+                        $(`#editpartialzone-${id}`).load(`/Todolist/EditPartial?id=${id}`)
+                    $(`#form-edit-${id}`).show();
+                        $(`#task-content-${id}`).hide();
+                        $(`#btn-for-show-edit-form-${id}`).hide()
+
+                }
+
+
+                function hideEditForm(id){
+                    $(`#editpartialzone-${id}`).hide();
+                    $(`#btn-edit-annuler-${id}`).hide();
+                    $(`#task-content-${id}`).show();
+                    $(`#btn-for-show-edit-form-${id}`).show()
+
+
+                }
+
+
+                function taskfinish(id) {
+
+                    $(`#task-content-${id}`).css("text-decoration", "line-through");
+                    $(`#task-content-${id}`).css("color", "blue");
+            }
+
+               
+              @*  $("#editpartialzone-@item.Id").load("/Todolist/EditPartial?id=@item.Id")*@
             </script>
        
 }
 
-        <script>
-          $('#createpartialzone').load("/Todolist/CreatePartial")
-        </script>
+      
     </tbody>
 </table>
