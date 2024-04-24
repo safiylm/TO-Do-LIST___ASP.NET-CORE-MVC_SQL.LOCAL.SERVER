@@ -64,6 +64,7 @@ h2 {
     max-width: 900px;
     min-width: 500px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -75,5 +76,42 @@ h2 {
     color:white;
     border: 1px solid white;
     border-radius: 10px;
-    margin: 0 10px;
+    margin: 10px;
+}
+
+
+@media (max-width : 800px){
+
+    h1 {
+        font-size: 35px;
+        margin: 10px 0px;
+    }
+
+    h2 {
+        font-size: 30px ;
+        margin-top: 20px;
+    }
+
+    .affichage {
+        width: 85vw !important;
+        max-width: 100vw;
+        min-width: 50vw;
+    }
+
+    .bloc {
+        padding: 10px;
+    }
+
+    .container-btns {
+        width: 70%;
+        max-width: 100vw;
+        min-width: 50vw;
+    }
+
+    .bloc p:nth-child(1) { /*premier paragraphe dans les blocs */
+    
+                           font-size:24px;
+                           }
+
+
 }
